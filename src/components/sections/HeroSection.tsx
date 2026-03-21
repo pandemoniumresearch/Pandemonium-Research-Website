@@ -26,7 +26,7 @@ export default function HeroSection() {
         >
           We Build What
           <br />
-          Should 
+          Should
           <br />
           Exist.
         </h1>
@@ -34,11 +34,16 @@ export default function HeroSection() {
         {/* Description paragraphs */}
         <div className="flex flex-col gap-5 max-w-lg">
           <p className="text-[#a0a0a0] leading-relaxed text-base">
-            Inspired by Milton&apos;s Pandemonium, a capital raised from nothing in a single night.
+            {/* Inspired by Milton&apos;s Pandemonium, a capital raised from nothing in a single night. */}
+            In Milton's imagination, Pandemonium was the capital built by fallen
+            angels in a single night, raised from nothing by those who refused
+            to stop building. We took the name seriously.
           </p>
           <p className="text-[#a0a0a0] leading-relaxed text-base">
-            We are researchers and engineers constructing the next era of AI, systems, and tools
-            when the world is asleep.
+            {/* We are researchers and engineers constructing the next era of AI,
+            systems, and tools when the world is asleep. */}
+            Pandemonium Research is where engineers and researchers come to
+            construct things that don't exist yet.
           </p>
         </div>
       </div>
