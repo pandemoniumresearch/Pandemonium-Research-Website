@@ -46,3 +46,86 @@ body {
   height: 2rem;
   pointer-events: none;
 }
+
+/* Research post prose styles */
+.prose-research h2 {
+  font-family: var(--font-space-grotesk), sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #f5f5f5;
+  margin-top: 2.5rem;
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.01em;
+  scroll-margin-top: 6rem;
+}
+
+.prose-research h3 {
+  font-family: var(--font-space-grotesk), sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #d0d0d0;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+  scroll-margin-top: 6rem;
+}
+
+.prose-research p {
+  color: #a0a0a0;
+  line-height: 1.8;
+  margin-bottom: 1.25rem;
+  font-size: 0.9375rem;
+}
+
+.prose-research strong {
+  color: #d0d0d0;
+  font-weight: 600;
+}
+
+.prose-research a {
+  color: #f5f5f5;
+  text-decoration: underline;
+  text-decoration-color: #2a2a2a;
+  text-underline-offset: 3px;
+  transition: text-decoration-color 0.15s;
+}
+
+.prose-research a:hover {
+  text-decoration-color: #a0a0a0;
+}
+
+.prose-research ul,
+.prose-research ol {
+  color: #a0a0a0;
+  padding-left: 1.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.prose-research li {
+  margin-bottom: 0.4rem;
+  line-height: 1.7;
+  font-size: 0.9375rem;
+}
+
+.prose-research pre {
+  background-color: #1a1a1a;
+  border: 1px solid #2a2a2a;
+  padding: 1rem 1.25rem;
+  overflow-x: auto;
+  margin-bottom: 1.5rem;
+}
+
+.prose-research code {
+  font-family: ui-monospace, "Cascadia Code", monospace;
+  font-size: 0.8125rem;
+  background-color: #1a1a1a;
+  border: 1px solid #2a2a2a;
+  padding: 0.15em 0.4em;
+  color: #c0c0c0;
+}
+
+.prose-research pre code {
+  background: none;
+  border: none;
+  padding: 0;
+  color: #a0a0a0;
+}
