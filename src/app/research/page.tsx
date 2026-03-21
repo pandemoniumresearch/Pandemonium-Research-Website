@@ -22,8 +22,6 @@ export default function ResearchPage() {
         </h1>
         <p className="mt-6 text-[#a0a0a0] leading-relaxed text-base">
           Papers, writeups, and experiments from independent research at Pandemonium.
-          Add a <code className="text-[#606060] text-sm">.md</code> file to{" "}
-          <code className="text-[#606060] text-sm">src/content/research/</code> to publish here.
         </p>
       </div>
 
