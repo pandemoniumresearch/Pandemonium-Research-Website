@@ -20,21 +20,29 @@ function slugify(text: string): string {
 function extractHeadings(markdown: string): ResearchHeading[] {
   const headings: ResearchHeading[] = [];
   for (const line of markdown.split("\n")) {
-    const m2 = line.match(/^## (.+)$/);
-    const m3 = line.match(/^### (.+)$/);
+    const trimmed = line.trimEnd(); // handle CRLF line endings
+    const m2 = trimmed.match(/^## (.+)$/);
+    const m3 = trimmed.match(/^### (.+)$/);
     if (m2) headings.push({ id: slugify(m2[1]), text: m2[1], level: 2 });
     else if (m3) headings.push({ id: slugify(m3[1]), text: m3[1], level: 3 });
   }
   return headings;
 }
 
-/** Inject id attributes into rendered h2/h3 tags. */
+/** Inject id attributes into rendered h2/h3 tags (strips any existing id first). */
 function injectHeadingIds(html: string): string {
-  return html.replace(/<(h[23])>([\s\S]*?)<\/h[23]>/g, (_, tag, inner) => {
-    const text = inner.replace(/<[^>]+>/g, "");
+  return html.replace(/<h([23])(?:[^>]*)>([\s\S]*?)<\/h[23]>/g, (_, level, inner) => {
+    const text = inner.replace(/<[^>]+>/g, "").trim();
     const id = slugify(text);
-    return `<${tag} id="${id}">${inner}</${tag}>`;
+    return `<h${level} id="${id}">${inner}</h${level}>`;
   });
+}
+
+/** Wrap every <table> in a scrollable div so wide tables don't break layout. */
+function wrapTables(html: string): string {
+  return html
+    .replace(/<table>/g, '<div class="prose-table-wrapper"><table>')
+    .replace(/<\/table>/g, "</table></div>");
 }
 
 function parsePost(filename: string): ResearchPost {
@@ -42,7 +50,7 @@ function parsePost(filename: string): ResearchPost {
   const { data, content } = matter(raw);
   const slug = data.slug ?? filename.replace(/\.md$/, "");
   const headings = extractHeadings(content);
-  const rendered = injectHeadingIds(marked(content) as string);
+  const rendered = wrapTables(injectHeadingIds(marked(content) as string));
   return {
     slug,
     title: data.title ?? "",
