@@ -1,4 +1,4 @@
-import BuildingIllustration from "@/components/icons/BuildingIllustration";
+import BuildingIllustrationAnimated from "@/components/icons/BuildingIllustrationAnimated";
 
 export default function HeroSection() {
   return (
@@ -50,7 +50,7 @@ export default function HeroSection() {
 
       {/* Right: Building illustration */}
       <div className="flex items-center justify-center lg:justify-end">
-        <BuildingIllustration className="w-full max-w-md lg:max-w-lg" />
+        <BuildingIllustrationAnimated className="w-full max-w-md lg:max-w-lg" />
       </div>
     </section>
   );
