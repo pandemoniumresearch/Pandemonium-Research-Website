@@ -24,14 +24,16 @@ export default function WorkingInTheDark() {
             Working In The Dark
           </h2>
           <p className="text-[#a0a0a0] leading-relaxed text-base max-w-md">
-            The independent, late-night lab culture is what defines us. Most things get built in
+            Most things get built in the dark. Not because they&apos;re hidden, because that&apos;s when the noise stops and the work starts.
+            {/* The independent, late-night lab culture is what defines us. Most things get built in
             the dark — not because they&apos;re hidden, but because that&apos;s when the noise stops
-            and the work starts.
+            and the work starts. */}
           </p>
           <p className="text-[#a0a0a0] leading-relaxed text-base max-w-md">
-            We are researchers and engineers constructing the next era of AI, systems, and tools
+            Pandemonium Research is an independent lab for people who build when everyone else is asleep. AI systems, tools, languages, infrastructure - anything worth making.
+            {/* We are researchers and engineers constructing the next era of AI, systems, and tools
             when the world is asleep. It&apos;s an independent, after-hours, relentless kind of
-            community.
+            community. */}
           </p>
         </div>
 
