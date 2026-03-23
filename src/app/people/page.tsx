@@ -1,15 +1,108 @@
+import Image from "next/image";
+import Link from "next/link";
+import { people } from "@/data/people";
+import { Person } from "@/lib/types";
+
+function PersonCard({ name, role, bio, imageUrl, links }: Person) {
+  return (
+    <div className="flex flex-col gap-4 border border-border bg-surface-elevated p-6">
+      {/* Portrait */}
+      <div className="relative w-full aspect-square bg-surface overflow-hidden">
+        {imageUrl ? (
+          <Image
+            src={imageUrl}
+            alt={`${name} portrait`}
+            fill
+            className="object-cover"
+            sizes="(max-width: 768px) 100vw, 33vw"
+          />
+        ) : (
+          <div className="h-full w-full flex items-center justify-center text-4xl select-none text-text-secondary">
+            {name.charAt(0).toUpperCase()}
+          </div>
+        )}
+      </div>
+
+      {/* Info */}
+      <div className="flex flex-col gap-1">
+        <h2
+          className="text-sm font-bold uppercase text-text-primary"
+          style={{ fontFamily: "var(--font-space-grotesk)" }}
+        >
+          {name}
+        </h2>
+        <p className="text-xs text-text-secondary tracking-wide uppercase">
+          {role}
+        </p>
+      </div>
+
+      {bio && (
+        <p className="text-xs text-text-secondary leading-relaxed">{bio}</p>
+      )}
+
+      {/* Links */}
+      {links && (
+        <div className="flex items-center gap-3 flex-wrap mt-auto pt-2">
+          {links.github && (
+            <Link
+              href={links.github}
+              target="_blank"
+              rel="noreferrer"
+              className="text-xs text-text-secondary hover:text-text-primary transition-colors"
+            >
+              GitHub ↗
+            </Link>
+          )}
+          {links.twitter && (
+            <Link
+              href={links.twitter}
+              target="_blank"
+              rel="noreferrer"
+              className="text-xs text-text-secondary hover:text-text-primary transition-colors"
+            >
+              Twitter ↗
+            </Link>
+          )}
+          {links.website && (
+            <Link
+              href={links.website}
+              target="_blank"
+              rel="noreferrer"
+              className="text-xs text-text-secondary hover:text-text-primary transition-colors"
+            >
+              Website ↗
+            </Link>
+          )}
+        </div>
+      )}
+    </div>
+  );
+}
+
 export default function PeoplePage() {
   return (
     <div className="max-w-7xl mx-auto px-6 md:px-12 py-32">
-      <p className="text-xs uppercase tracking-widest text-[#a0a0a0] mb-6" style={{ fontFamily: "var(--font-space-grotesk)" }}>
+      <p
+        className="text-xs uppercase tracking-widest text-text-secondary mb-6"
+        style={{ fontFamily: "var(--font-space-grotesk)" }}
+      >
         People
       </p>
-      <h1 className="text-5xl font-bold uppercase text-[#f5f5f5] leading-tight" style={{ fontFamily: "var(--font-space-grotesk)" }}>
+      <h1
+        className="text-5xl font-bold uppercase text-text-primary leading-tight"
+        style={{ fontFamily: "var(--font-space-grotesk)" }}
+      >
         The Builders.
       </h1>
-      <p className="mt-8 text-[#a0a0a0] max-w-lg leading-relaxed">
-        Engineers, researchers, and occasional troublemakers. Coming soon.
+      <p className="mt-8 text-text-secondary max-w-lg leading-relaxed">
+        Engineers, researchers, and occasional troublemakers.
       </p>
+
+      <div className="mt-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {people.map((person) => (
+          <PersonCard key={person.id} {...person} />
+        ))}
+      </div>
     </div>
   );
 }
