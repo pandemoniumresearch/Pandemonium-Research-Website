@@ -10,18 +10,32 @@ export interface Intersection {
   title: string;
   description: string;
   icon:
-    | "neural-net"
-    | "server"
-    | "question-mark"
-    | "shield"
-    | "chart-line"
-    | "terminal";
+  | "neural-net"
+  | "server"
+  | "question-mark"
+  | "shield"
+  | "chart-line"
+  | "terminal";
 }
 
 export interface ResearchHeading {
   id: string;
   text: string;
   level: 2 | 3;
+}
+
+export interface Person {
+  id: string;
+  name: string;
+  role: string;
+  bio?: string;
+  quote?: string;
+  imageUrl?: string;
+  links?: {
+    github?: string;
+    twitter?: string;
+    website?: string;
+  };
 }
 
 export interface RepositoryProject {
