@@ -9,7 +9,13 @@ export interface Intersection {
   id: string;
   title: string;
   description: string;
-  icon: "neural-net" | "server" | "question-mark" | "shield" | "chart-line" | "terminal";
+  icon:
+    | "neural-net"
+    | "server"
+    | "question-mark"
+    | "shield"
+    | "chart-line"
+    | "terminal";
 }
 
 export interface ResearchHeading {
