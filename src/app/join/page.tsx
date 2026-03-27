@@ -9,7 +9,7 @@ export default function JoinPage() {
       </h1>
       <p className="mt-8 text-[#a0a0a0] max-w-lg leading-relaxed">
         Pandemonium Research is where engineers and researchers come to construct things that is yet to exist.
-        If that sounds like you — we want to hear from you.
+        If that sounds like you, we want to hear from you.
       </p>
     </div>
   );

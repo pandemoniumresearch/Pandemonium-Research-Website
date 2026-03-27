@@ -5,7 +5,7 @@ export const intersections: Intersection[] = [
     id: "ai-systems",
     title: "Advanced AI Systems",
     description:
-      "We work at the frontier of machine learning — not just applying models, but building the systems that make new capabilities possible.",
+      "We work at the frontier of machine learning, not just applying models, but building the systems that make new capabilities possible.",
     icon: "neural-net",
   },
   {
@@ -19,7 +19,7 @@ export const intersections: Intersection[] = [
     id: "cybersecurity",
     title: "Cybersecurity",
     description:
-      "Attacks don't wait. We build the defenses, threat models, and tooling that keep systems — and the people who depend on them — safe.",
+      "Attacks don't wait. We build the defenses, threat models, and tooling that keep systems and the people who depend on them safe.",
     icon: "shield",
   },
   {
@@ -40,7 +40,7 @@ export const intersections: Intersection[] = [
     id: "uncategorized",
     title: "The Uncategorized Next",
     description:
-      "Some of the most important problems don't have a field yet. We work on those too — whatever sits at the edge of what's knowable.",
+      "Some of the most important problems don't have a field yet. We work on those too, whatever sits at the edge of what's knowable.",
     icon: "question-mark",
   },
 ];

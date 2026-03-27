@@ -26,7 +26,7 @@ export const projects: Project[] = [
     id: "ironclad",
     title: "Ironclad",
     description:
-      "Formally verified components for distributed consensus — correctness proofs for the hard parts of distributed systems.",
+      "Formally verified components for distributed consensus, correctness proofs for the hard parts of distributed systems.",
     href: "/research/ironclad",
   },
   {
