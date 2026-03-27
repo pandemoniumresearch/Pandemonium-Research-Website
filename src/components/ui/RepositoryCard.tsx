@@ -15,7 +15,7 @@ export default function RepositoryCard({
   liveUrl,
   thumbnailUrl,
 }: RepositoryProject) {
-  const previewImage = thumbnailUrl ?? buildGithubPreview(repositoryFullName);
+  const previewImage = thumbnailUrl ?? (repositoryFullName ? buildGithubPreview(repositoryFullName) : null);
 
   return (
     <FoldedCard className="flex flex-col h-full overflow-hidden">
@@ -49,14 +49,16 @@ export default function RepositoryCard({
         </p>
 
         <div className="flex items-center gap-3 flex-wrap">
-          <Link
-            href={repositoryUrl}
-            target="_blank"
-            rel="noreferrer"
-            className="inline-flex items-center text-xs font-medium text-text-secondary hover:text-text-primary transition-colors border border-border hover:border-[#505050] px-4 py-2"
-          >
-            Repository
-          </Link>
+          {repositoryUrl ? (
+            <Link
+              href={repositoryUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center text-xs font-medium text-text-secondary hover:text-text-primary transition-colors border border-border hover:border-[#505050] px-4 py-2"
+            >
+              Repository
+            </Link>
+          ) : null}
 
           {liveUrl ? (
             <Link

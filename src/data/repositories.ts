@@ -11,19 +11,19 @@ export const repositories: RepositoryProject[] = [
     liveUrl: "https://devmonitor.vercel.app",
   },
   {
-    id: "project-scribe",
-    name: "Project Scribe",
+    id: "skilldex",
+    name: "Skilldex",
     description:
-      "Structured generation tooling for reliable multi-stage LLM output pipelines.",
-    repositoryUrl: "https://github.com/Pandemonium-Research/project-scribe",
-    repositoryFullName: "Pandemonium-Research/project-scribe",
+      "A structured index for tracking and organizing skills, built for developers and researchers who want to map their technical knowledge systematically.",
+    repositoryUrl: "https://github.com/Pandemonium-Research/Skilldex",
+    repositoryFullName: "Pandemonium-Research/Skilldex",
+    liveUrl: "https://skilldex-web.vercel.app",
   },
   {
-    id: "aetheros",
-    name: "AetherOS",
+    id: "stacked",
+    name: "Stacked",
     description:
-      "Systems research around deterministic scheduling for AI-heavy workloads.",
-    repositoryUrl: "https://github.com/Pandemonium-Research/aetheros",
-    repositoryFullName: "Pandemonium-Research/aetheros",
+      "A modern tool for managing and visualizing stacked pull requests, making code review workflows faster and clearer.",
+    liveUrl: "https://stacked-cm.vercel.app",
   },
 ];

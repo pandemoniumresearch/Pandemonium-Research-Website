@@ -42,8 +42,8 @@ export interface RepositoryProject {
   id: string;
   name: string;
   description: string;
-  repositoryUrl: string;
-  repositoryFullName: string;
+  repositoryUrl?: string;
+  repositoryFullName?: string;
   liveUrl?: string;
   thumbnailUrl?: string;
 }
@@ -57,4 +57,5 @@ export interface ResearchPost {
   summary: string;
   content: string;
   headings: ResearchHeading[];
+  paperUrl?: string;
 }
