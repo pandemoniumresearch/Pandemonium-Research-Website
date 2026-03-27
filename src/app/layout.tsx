@@ -18,6 +18,9 @@ export const metadata: Metadata = {
   title: "Pandemonium Research",
   description:
     "Pandemonium Research exists at the intersection of AI, systems, and whatever comes next. We're engineers, researchers, and occasional troublemakers working on problems that don't have a category yet.",
+  icons: {
+    icon: "/pandemonium_research_logo.png",
+  },
 };
 
 export default function RootLayout({
