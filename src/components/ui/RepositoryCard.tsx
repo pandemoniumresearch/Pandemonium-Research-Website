@@ -16,7 +16,11 @@ export default function RepositoryCard({
   liveUrl,
   thumbnailUrl,
 }: RepositoryProject) {
-  const previewImage = thumbnailUrl ?? (repositoryFullName ? buildGithubPreview(repositoryFullName) : null);
+  const thumUrl = liveUrl ? `https://image.thum.io/get/width/1200/${liveUrl}` : null;
+  const previewImage =
+    thumbnailUrl ??
+    (repositoryFullName ? buildGithubPreview(repositoryFullName) : null) ??
+    thumUrl;
 
   return (
     <FoldedCard className="flex flex-col h-full overflow-hidden">
@@ -28,6 +32,7 @@ export default function RepositoryCard({
             fill
             sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
             loading="eager"
+            unoptimized={previewImage === thumUrl}
             className="object-cover"
           />
         ) : (
