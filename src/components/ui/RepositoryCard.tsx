@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import FoldedCard from "./FoldedCard";
 import BuildingIcon from "@/components/icons/BuildingIcon";
@@ -21,11 +22,13 @@ export default function RepositoryCard({
     <FoldedCard className="flex flex-col h-full overflow-hidden">
       <div className="relative w-full aspect-video border-b border-border bg-surface-elevated">
         {previewImage ? (
-          <img
+          <Image
             src={previewImage}
             alt={`${name} preview thumbnail`}
-            loading="lazy"
-            className="h-full w-full object-cover"
+            fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+            loading="eager"
+            className="object-cover"
           />
         ) : (
           <div className="h-full w-full flex items-center justify-center">
