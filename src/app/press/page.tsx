@@ -1,3 +1,10 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: { absolute: "Press - Pandemonium Research" },
+  description: "Press resources and information about Pandemonium Research.",
+};
+
 export default function PressPage() {
   return (
     <div className="max-w-7xl mx-auto px-6 md:px-12 py-32">

@@ -1,6 +1,13 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { getLatestCohort } from "@/data/cohorts";
 import { CohortStatus } from "@/lib/types";
+
+export const metadata: Metadata = {
+  title: { absolute: "Join - Pandemonium Research" },
+  description:
+    "Find ways to get involved with Pandemonium Research, from cohort programs to open collaboration.",
+};
 
 const statusLabel: Record<CohortStatus, string> = {
   open: "Applications Open",

@@ -1,5 +1,12 @@
+import type { Metadata } from "next";
 import { getAllPosts } from "@/lib/research";
 import ResearchCard from "@/components/ui/ResearchCard";
+
+export const metadata: Metadata = {
+  title: { absolute: "Research - Pandemonium Research" },
+  description:
+    "Technical writeups and research from Pandemonium Research on AI systems, distributed computing, cybersecurity, and developer infrastructure.",
+};
 
 export default function ResearchPage() {
   const posts = getAllPosts();

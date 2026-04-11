@@ -1,3 +1,10 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: { absolute: "Contact - Pandemonium Research" },
+  description: "Get in touch with Pandemonium Research.",
+};
+
 export default function ContactPage() {
   return (
     <div className="max-w-7xl mx-auto px-6 md:px-12 py-32">

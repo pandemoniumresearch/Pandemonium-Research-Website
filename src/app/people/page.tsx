@@ -1,7 +1,14 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { people } from "@/data/people";
 import { Person } from "@/lib/types";
+
+export const metadata: Metadata = {
+  title: { absolute: "People - Pandemonium Research" },
+  description:
+    "Meet the researchers, engineers, and builders behind Pandemonium Research.",
+};
 
 function PersonCard({ name, role, bio, imageUrl, links }: Person) {
   return (

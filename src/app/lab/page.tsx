@@ -1,3 +1,10 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: { absolute: "Lab - Pandemonium Research" },
+  description: "Tools and experiments from Pandemonium Research.",
+};
+
 export default function LabPage() {
   return (
     <div className="max-w-7xl mx-auto px-6 md:px-12 py-32">

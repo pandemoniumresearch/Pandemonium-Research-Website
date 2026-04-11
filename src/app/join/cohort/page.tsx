@@ -1,8 +1,15 @@
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getLatestCohort } from "@/data/cohorts";
 import { cohortFormFields } from "@/data/cohort-form";
 import ApplicationForm from "@/components/ui/ApplicationForm";
 import { CohortStatus } from "@/lib/types";
+
+export const metadata: Metadata = {
+  title: { absolute: "Cohort Program - Pandemonium Research" },
+  description:
+    "Apply to the Pandemonium Research cohort program for builders working on ambitious technical projects.",
+};
 
 const statusLabel: Record<CohortStatus, string> = {
   open: "Applications Open",
