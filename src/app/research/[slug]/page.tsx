@@ -61,7 +61,7 @@ export default async function ResearchPostPage({
   };
 
   return (
-    <div className="max-w-6xl mx-auto px-6 md:px-12 py-32">
+    <div className="max-w-6xl mx-auto px-6 md:px-12 py-16 md:py-32">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}

@@ -88,7 +88,7 @@ function PersonCard({ name, role, bio, imageUrl, links }: Person) {
 
 export default function PeoplePage() {
   return (
-    <div className="max-w-7xl mx-auto px-6 md:px-12 py-32">
+    <div className="max-w-7xl mx-auto px-6 md:px-12 py-16 md:py-32">
       <p
         className="text-xs uppercase tracking-widest text-text-secondary mb-6"
         style={{ fontFamily: "var(--font-space-grotesk)" }}
@@ -96,7 +96,7 @@ export default function PeoplePage() {
         People
       </p>
       <h1
-        className="text-5xl font-bold uppercase text-text-primary leading-tight"
+        className="text-4xl sm:text-5xl font-bold uppercase text-text-primary leading-tight"
         style={{ fontFamily: "var(--font-space-grotesk)" }}
       >
         The Builders.

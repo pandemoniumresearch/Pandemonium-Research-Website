@@ -36,7 +36,7 @@ export default function CohortPage() {
   if (!cohort) notFound();
 
   return (
-    <div className="max-w-7xl mx-auto px-6 md:px-12 py-32">
+    <div className="max-w-7xl mx-auto px-6 md:px-12 py-16 md:py-32">
       {/* ----------------------------------------------------------------- */}
       {/* Header                                                             */}
       {/* ----------------------------------------------------------------- */}
@@ -48,15 +48,15 @@ export default function CohortPage() {
           Join / Cohort
         </p>
 
-        <div className="flex items-center gap-4 mb-6">
+        <div className="flex flex-col sm:flex-row sm:items-start gap-3 sm:gap-4 mb-6">
           <h1
-            className="text-5xl font-bold uppercase text-[#f5f5f5] leading-tight"
+            className="text-4xl sm:text-5xl font-bold uppercase text-[#f5f5f5] leading-tight"
             style={{ fontFamily: "var(--font-space-grotesk)" }}
           >
             {cohort.name} {cohort.year}
           </h1>
           <span
-            className={`shrink-0 self-start mt-2 text-xs uppercase tracking-widest border px-2.5 py-1 ${statusColor[cohort.status]}`}
+            className={`shrink-0 self-start sm:mt-2 text-xs uppercase tracking-widest border px-2.5 py-1 ${statusColor[cohort.status]}`}
             style={{ fontFamily: "var(--font-space-grotesk)" }}
           >
             {statusLabel[cohort.status]}
