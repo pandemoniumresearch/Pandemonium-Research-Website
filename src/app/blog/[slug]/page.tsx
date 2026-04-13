@@ -62,6 +62,7 @@ export default async function BlogPostPage({
 
   return (
     <div className="max-w-6xl mx-auto px-6 md:px-12 py-16 md:py-32">
+      <link rel="stylesheet" href="/katex.min.css" />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}

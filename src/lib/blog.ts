@@ -2,10 +2,12 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import { marked } from "marked";
+import markedKatex from "marked-katex-extension";
 import type { BlogPost, ResearchHeading } from "@/lib/types";
 
 const CONTENT_DIR = path.join(process.cwd(), "src", "content", "blog");
 
+marked.use(markedKatex({ throwOnError: false, output: "html" }));
 marked.setOptions({
   gfm: true,
 });
