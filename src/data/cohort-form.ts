@@ -62,13 +62,15 @@ export const cohortFormFields: FormField[] = [
     label: "CV / Resume",
     type: "url",
     placeholder: "https://drive.google.com/...",
-    helperText: "Optional. Paste a public Google Drive, Dropbox, or similar link.",
+    required: true,
+    helperText: "Paste a public Google Drive, Dropbox, or similar link.",
   },
   {
     id: "links",
     label: "GitHub, Portfolio, or Personal Site",
     type: "url",
     placeholder: "https://",
+    required: true,
     helperText: "One link. Pick the one that shows your work best.",
   },
   {
