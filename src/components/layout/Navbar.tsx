@@ -7,6 +7,7 @@ import BuildingIcon from "@/components/icons/BuildingIcon";
 const navLinks = [
   { label: "Home", href: "/" },
   { label: "Research", href: "/research" },
+  { label: "Blog", href: "/blog" },
   { label: "Projects", href: "/projects" },
   { label: "People", href: "/people" },
   { label: "Lab", href: "/lab" },

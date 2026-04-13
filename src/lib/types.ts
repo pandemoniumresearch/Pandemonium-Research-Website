@@ -60,6 +60,18 @@ export interface ResearchPost {
   paperUrl?: string;
 }
 
+export interface BlogPost {
+  slug: string;
+  title: string;
+  authors: string[];
+  date: string;
+  tags: string[];
+  summary: string;
+  content: string;
+  headings: ResearchHeading[];
+  coverImage?: string;
+}
+
 export type FormFieldType =
   | "text"
   | "email"
