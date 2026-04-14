@@ -44,6 +44,15 @@ export const repositories: RepositoryProject[] = [
     liveUrl: "https://devmonitor.vercel.app",
   },
   {
+    id: "proofpixel",
+    name: "ProofPixel",
+    description:
+      "SHA-256 content-hash watermarking for AI-generated images. Implements the Imagine Hashing architecture for verifiable provenance of AI-generated media.",
+    repositoryUrl: "https://github.com/Pandemonium-Research/ProofPixel",
+    repositoryFullName: "Pandemonium-Research/ProofPixel",
+    liveUrl: "https://proof-pixel.vercel.app",
+  },
+  {
     id: "hailstorm",
     name: "Hailstorm",
     description:
