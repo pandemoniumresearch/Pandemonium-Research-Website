@@ -43,7 +43,7 @@ export const people: Person[] = [
       "https://res.cloudinary.com/dkldnxuae/image/upload/c_limit,f_auto,q_auto,w_400/v1/pandemonium/people/Roshini_Ramesh_bw?_a=BAMAOGcc0",
     // quote: ""
     // affiliations: { incoming: "IISc", prev: ["IISc"] },
-    affiliations: { prev: ["IISc"] },
+    affiliations: { prev: ["ISFCR"] },
     links: {
       github: "https://github.com/roshr22",
       linkedin: "https://www.linkedin.com/in/roshiniramesh/",
