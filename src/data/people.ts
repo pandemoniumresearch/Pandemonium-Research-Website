@@ -66,7 +66,7 @@ export const people: Person[] = [
   {
     id: "pranavjeet-naidu",
     name: "Pranavjeet Naidu",
-    role: "Research Associate",
+    role: "Researcher",
     imageUrl:
       "https://res.cloudinary.com/dkldnxuae/image/upload/c_limit,f_auto,q_auto,w_400/v1/pandemonium/people/Jeet_bw?_a=BAMAOGcc0",
     // quote: ""
