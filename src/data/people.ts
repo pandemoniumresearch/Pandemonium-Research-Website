@@ -63,4 +63,18 @@ export const people: Person[] = [
       linkedin: "https://www.linkedin.com/in/nikhil-r-0375732b5/",
     },
   },
+  {
+    id: "pranavjeet-naidu",
+    name: "Pranavjeet Naidu",
+    role: "Research Associate",
+    imageUrl:
+      "https://res.cloudinary.com/dkldnxuae/image/upload/c_limit,f_auto,q_auto,w_400/v1/pandemonium/people/Jeet_bw?_a=BAMAOGcc0",
+    // quote: ""
+    affiliations: { prev: ["PIL"] },
+    links: {
+      github: "https://github.com/Pranavjeet-Naidu",
+      linkedin: "https://www.linkedin.com/in/pranavjeet-naidu-464882282/",
+      website: "https://pranavjeet.me",
+    },
+  },
 ];
