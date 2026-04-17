@@ -31,6 +31,7 @@ export const cohorts: Cohort[] = [
       { label: "Cohort begins", date: "June 29, 2026" },
       { label: "Cohort ends", date: "July 26, 2026" },
     ],
+    contactEmail: "pandemoniumresearch@gmail.com",
   },
 ];
 

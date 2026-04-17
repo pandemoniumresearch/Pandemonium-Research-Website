@@ -159,6 +159,20 @@ export default function CohortPage() {
               ))}
             </div>
           </section>
+
+          {/* Contact */}
+          {cohort.contactEmail && (
+            <p className="text-sm text-[#505050]">
+              For any queries, reach out at{" "}
+              <a
+                href={`mailto:${cohort.contactEmail}`}
+                className="text-[#a0a0a0] hover:text-[#f5f5f5] transition-colors underline underline-offset-4"
+              >
+                {cohort.contactEmail}
+              </a>
+              .
+            </p>
+          )}
         </div>
 
         {/* --------------------------------------------------------------- */}
