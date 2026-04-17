@@ -37,6 +37,12 @@ body {
   }
 }
 
+/* Lab page animations */
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.3; }
+}
+
 /* Folded corner card effect */
 .card-folded {
   position: relative;
