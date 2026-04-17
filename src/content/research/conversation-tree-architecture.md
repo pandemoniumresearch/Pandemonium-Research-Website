@@ -4,7 +4,7 @@ title: "Conversation Tree Architecture: A Structured Framework for Context-Aware
 authors:
   - Pranav Hemanth
   - Sampriti Saha
-date: "2025-03-01"
+date: "2026-03-01"
 tags:
   - LLMs
   - Context Management
