@@ -105,4 +105,5 @@ export interface Cohort {
   endDate?: string;
   lookingFor: string[];
   timeline: { label: string; date: string }[];
+  contactEmail?: string;
 }

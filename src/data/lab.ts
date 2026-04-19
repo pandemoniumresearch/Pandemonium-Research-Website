@@ -41,7 +41,7 @@ export const teamStatus: TeamStatusEntry[] = [
     memberId: "sampriti-saha",
     status: "Trading sleep credits for claude tokens",
   },
-  { memberId: "roshini-ramesh", status: "Rusting over ferus" },
+  { memberId: "roshini-ramesh", status: "Rusting over FeRus" },
   { memberId: "nikhil-r", status: "Trying to find free lunch" },
   { memberId: "pranavjeet-naidu", status: "Buying some (g)socs" },
   { memberId: "rahul-jaikrishna", status: "Research @ UC Berkeley" },

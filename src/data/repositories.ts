@@ -5,7 +5,7 @@ export const repositories: RepositoryProject[] = [
     id: "stacked",
     name: "Stacked",
     description:
-      "A modern tool for managing and visualizing stacked pull requests, making code review workflows faster and clearer.",
+      "A collaborative task management and outreach tracking application designed for academic and professional networking",
     liveUrl: "https://stacked-cm.vercel.app",
     thumbnailUrl: "/thumbnails/stacked.png",
   },
@@ -13,7 +13,7 @@ export const repositories: RepositoryProject[] = [
     id: "skilldex",
     name: "Skilldex",
     description:
-      "A structured index for tracking and organizing skills, built for developers and researchers who want to map their technical knowledge systematically.",
+      "Skilldex is a package manager and registry for Claude .skill packages and reusable skillsets, handling installation at the right scope, compiler-style validation, quality scoring, and AI-powered skill suggestions while integrating natively with Claude Code via MCP",
     repositoryUrl: "https://github.com/Pandemonium-Research/Skilldex",
     repositoryFullName: "Pandemonium-Research/Skilldex",
     liveUrl: "https://skilldex-web.vercel.app",
