@@ -24,6 +24,11 @@ export const researchPipeline: ResearchPipelineData = {
       author: "Roshini Ramesh",
       target: "Arxiv",
     },
+    {
+      title: "Ouroboros",
+      author: "Prakyath Nayak",
+      target: "Arxiv",
+    },
   ],
   submitted: [
     {
