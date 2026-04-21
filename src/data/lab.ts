@@ -30,17 +30,16 @@ export const researchPipeline: ResearchPipelineData = {
       target: "Arxiv",
     },
   ],
-  submitted: [
-    {
-      title: "Skilldex",
-      author: "Sampriti Saha & Pranav Hemanth",
-      target: "Arxiv",
-    },
-  ],
+  submitted: [],
   published: [
     {
       title: "Conversation Tree Architecture",
       author: "Pranav Hemanth & Sampriti Saha",
+      target: "Arxiv",
+    },
+    {
+      title: "Skilldex",
+      author: "Sampriti Saha & Pranav Hemanth",
       target: "Arxiv",
     },
   ],
