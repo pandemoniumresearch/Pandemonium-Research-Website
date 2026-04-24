@@ -70,6 +70,18 @@ export interface BlogPost {
   coverImage?: string;
 }
 
+export type NewsSource = "linkedin" | "x" | "instagram" | "other";
+
+export interface NewsItem {
+  id: string;
+  title: string;
+  date: string;
+  summary: string;
+  source: NewsSource;
+  url: string;
+  tags?: string[];
+}
+
 export type FormFieldType =
   | "text"
   | "email"
