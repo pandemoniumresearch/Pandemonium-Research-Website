@@ -2,6 +2,16 @@ import type { NewsItem } from "@/lib/types";
 
 export const newsItems: NewsItem[] = [
   {
+    id: "li-7453456688004870145",
+    title: "We are open-sourcing OpenDesign",
+    date: "2026-04-24",
+    summary:
+      "A model-agnostic design tool that turns a prompt into a live UI prototype in seconds — no subscriptions, no vendor lock-in, self-hostable. Switch between Claude, ChatGPT, Gemini, or your own models, and export to HTML, PDF, or MP4 with deterministic animation timing. Open source, open to contributors.",
+    source: "linkedin",
+    url: "https://www.linkedin.com/posts/pandemonium-research_we-are-open-sourcing-opendesign-a-model-agnostic-activity-7453456880284270592-BZoW",
+    tags: ["project", "open-source"],
+  },
+  {
     id: "li-7448420968466784256",
     title: "Conversation Tree Architecture: Fixing Context Poisoning in LLMs",
     date: "2026-04-10",
