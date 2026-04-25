@@ -2,6 +2,16 @@ import type { NewsItem } from "@/lib/types";
 
 export const newsItems: NewsItem[] = [
   {
+    id: "li-7453861196941721601",
+    title: "We built Skilldex: a package manager for agent skills",
+    date: "2026-04-25",
+    summary:
+      "Most people building LLM agents are still wiring skills together by hand — no versioning, no validation, no coherence. Skilldex is a package manager and registry for agent skill packages (think npm, but for agent skills), with Skillsets for bundling related skills with shared assets, a compiler-style validator, and an MCP server for Claude Code integration. Open source, with a preprint on arXiv.",
+    source: "linkedin",
+    url: "https://www.linkedin.com/posts/pandemonium-research_most-people-building-llm-agents-are-still-activity-7453861196941721601-dJVj",
+    tags: ["project", "research", "open-source"],
+  },
+  {
     id: "li-7453456688004870145",
     title: "We are open-sourcing OpenDesign",
     date: "2026-04-24",
