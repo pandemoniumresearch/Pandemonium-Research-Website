@@ -14,7 +14,7 @@ export const cohorts: Cohort[] = [
     ],
     duration: "4 weeks",
     format: "Remote-first",
-    applicationDeadline: "2026-05-01",
+    applicationDeadline: "2026-06-01",
     startDate: "2026-06-29",
     endDate: "2026-07-26",
     lookingFor: [
@@ -26,8 +26,8 @@ export const cohorts: Cohort[] = [
     ],
     timeline: [
       { label: "Applications open", date: "April 10, 2026" },
-      { label: "Application deadline", date: "May 1, 2026" },
-      { label: "Decisions sent", date: "May 15, 2026" },
+      { label: "Application deadline", date: "June 1, 2026" },
+      { label: "Decisions sent", date: "June 15, 2026" },
       { label: "Cohort begins", date: "June 29, 2026" },
       { label: "Cohort ends", date: "July 26, 2026" },
     ],
