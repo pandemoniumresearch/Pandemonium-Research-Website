@@ -44,6 +44,8 @@ export interface RepositoryProject {
   repositoryFullName?: string;
   liveUrl?: string;
   thumbnailUrl?: string;
+  npmPackage?: string;
+  npmDownloads?: number;
 }
 
 export interface ResearchPost {

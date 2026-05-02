@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import RepositoryCard from "@/components/ui/RepositoryCard";
 import { repositories } from "@/data/repositories";
+import { getNpmDownloads } from "@/lib/npm";
 
 export const metadata: Metadata = {
   title: { absolute: "Projects - Pandemonium Research" },
@@ -8,7 +9,15 @@ export const metadata: Metadata = {
     "Open-source projects built by Pandemonium Research across AI systems, developer tooling, and infrastructure.",
 };
 
-export default function ProjectsPage() {
+export default async function ProjectsPage() {
+  const reposWithStats = await Promise.all(
+    repositories.map(async (repo) => {
+      if (!repo.npmPackage) return repo;
+      const npmDownloads = await getNpmDownloads(repo.npmPackage);
+      return { ...repo, npmDownloads: npmDownloads ?? undefined };
+    })
+  );
+
   return (
     <div className="max-w-7xl mx-auto px-6 md:px-12 py-32">
       <p
@@ -29,7 +38,7 @@ export default function ProjectsPage() {
       </p>
 
       <div className="mt-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {repositories.map((repository) => (
+        {reposWithStats.map((repository) => (
           <RepositoryCard key={repository.id} {...repository} />
         ))}
       </div>

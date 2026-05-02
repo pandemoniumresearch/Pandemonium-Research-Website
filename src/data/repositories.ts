@@ -17,6 +17,7 @@ export const repositories: RepositoryProject[] = [
     repositoryUrl: "https://github.com/Pandemonium-Research/Skilldex",
     repositoryFullName: "Pandemonium-Research/Skilldex",
     liveUrl: "https://skilldex-web.vercel.app",
+    npmPackage: "skilldex-cli",
   },
   {
     id: "opendesign",

@@ -8,6 +8,12 @@ function buildGithubPreview(repositoryFullName: string) {
   return `https://opengraph.githubassets.com/1/${repositoryFullName}`;
 }
 
+function formatDownloads(n: number): string {
+  if (n >= 1_000_000) return `${(n / 1_000_000).toFixed(1)}M`;
+  if (n >= 1_000) return `${(n / 1_000).toFixed(1)}k`;
+  return n.toString();
+}
+
 export default function RepositoryCard({
   name,
   description,
@@ -15,6 +21,7 @@ export default function RepositoryCard({
   repositoryFullName,
   liveUrl,
   thumbnailUrl,
+  npmDownloads,
 }: RepositoryProject) {
   const thumUrl = liveUrl ? `https://image.thum.io/get/width/1200/${liveUrl}` : null;
   const previewImage =
@@ -68,15 +75,28 @@ export default function RepositoryCard({
             </Link>
           ) : null}
 
-          {liveUrl ? (
-            <Link
-              href={liveUrl}
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center text-xs font-medium text-text-secondary hover:text-text-primary transition-colors border border-border hover:border-[#505050] px-4 py-2"
-            >
-              Live Site
-            </Link>
+          {(liveUrl || npmDownloads != null) ? (
+            <div className="inline-flex items-center">
+              {liveUrl ? (
+                <Link
+                  href={liveUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center text-xs font-medium text-text-secondary hover:text-text-primary transition-colors border border-border hover:border-[#505050] px-4 py-2"
+                >
+                  Live Site
+                </Link>
+              ) : null}
+
+              {npmDownloads != null ? (
+                <span className="inline-flex items-center gap-1.5 text-xs text-text-secondary border border-border border-l-0 px-4 py-2">
+                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+                    <path d="M6 1v7M6 8l-2.5-2.5M6 8l2.5-2.5M1.5 10.5h9" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                  {formatDownloads(npmDownloads)} downloads
+                </span>
+              ) : null}
+            </div>
           ) : null}
         </div>
       </div>
