@@ -28,12 +28,21 @@ export const repositories: RepositoryProject[] = [
     repositoryFullName: "Pandemonium-Research/OpenDesign",
   },
   {
-    id: "kosmos",
-    name: "KosmOS",
+    id: "javalens",
+    name: "JavaLens",
     description:
-      "A bootable Ubuntu server image pre-loaded with LLMs, agent frameworks, and curated tooling. Boot it, SSH in, run an agent. No setup required.",
-    repositoryUrl: "https://github.com/Pandemonium-Research/KosmOS",
-    repositoryFullName: "Pandemonium-Research/KosmOS",
+      "A VS Code extension that generates a live UML class diagram for any Java file you have open, updating as you type.",
+    repositoryUrl: "https://github.com/Pandemonium-Research/JavaLens",
+    repositoryFullName: "Pandemonium-Research/JavaLens",
+  },
+  {
+    id: "devmonitor",
+    name: "DevMonitor",
+    description:
+      "DevMonitor is a real-time developer dashboard that aggregates AI research, LLM leaderboards, and tech updates into a customizable drag-and-drop interface.",
+    repositoryUrl: "https://github.com/Pandemonium-Research/DevMonitor",
+    repositoryFullName: "Pandemonium-Research/DevMonitor",
+    liveUrl: "https://devmonitor.vercel.app",
   },
   {
     id: "craig",
@@ -44,13 +53,12 @@ export const repositories: RepositoryProject[] = [
     repositoryFullName: "Pandemonium-Research/CRAiG",
   },
   {
-    id: "devmonitor",
-    name: "DevMonitor",
+    id: "kosmos",
+    name: "KosmOS",
     description:
-      "DevMonitor is a real-time developer dashboard that aggregates AI research, LLM leaderboards, and tech updates into a customizable drag-and-drop interface.",
-    repositoryUrl: "https://github.com/Pandemonium-Research/DevMonitor",
-    repositoryFullName: "Pandemonium-Research/DevMonitor",
-    liveUrl: "https://devmonitor.vercel.app",
+      "A bootable Ubuntu server image pre-loaded with LLMs, agent frameworks, and curated tooling. Boot it, SSH in, run an agent. No setup required.",
+    repositoryUrl: "https://github.com/Pandemonium-Research/KosmOS",
+    repositoryFullName: "Pandemonium-Research/KosmOS",
   },
   {
     id: "hailstorm",
