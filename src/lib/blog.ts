@@ -69,9 +69,21 @@ function extractHeadings(markdown: string): ResearchHeading[] {
   return headings;
 }
 
+function decodeHtmlEntities(text: string): string {
+  return text
+    .replace(/&#(\d+);/g, (_, code) => String.fromCharCode(+code))
+    .replace(/&#x([0-9a-f]+);/gi, (_, hex) => String.fromCharCode(parseInt(hex, 16)))
+    .replace(/&amp;/g, "&")
+    .replace(/&lt;/g, "<")
+    .replace(/&gt;/g, ">")
+    .replace(/&quot;/g, '"')
+    .replace(/&apos;/g, "'")
+    .replace(/&nbsp;/g, " ");
+}
+
 function injectHeadingIds(html: string): string {
   return html.replace(/<h([23])(?:[^>]*)>([\s\S]*?)<\/h[23]>/g, (_, level, inner) => {
-    const text = inner.replace(/<[^>]+>/g, "").trim();
+    const text = decodeHtmlEntities(inner.replace(/<[^>]+>/g, "").trim());
     const id = slugify(text);
     return `<h${level} id="${id}">${inner}</h${level}>`;
   });
